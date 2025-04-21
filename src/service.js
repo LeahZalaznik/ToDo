@@ -11,12 +11,12 @@ axios.interceptors.response.use(
 export default {
   getTasks: async () => {
     const result = await axios.get(``)    
-    return result.data;
+    return result?.data;
   },
 
   addTask: async(name)=>{
     const result = await axios.post(``,{name,isComplete:false})    
-    return result.data;
+    return result?.data;
   },
 
   setCompleted: async(id, isComplete)=>{
